@@ -14,6 +14,7 @@ public class FlamingNinjaStar {
 		// 1. Make a new robot, and set it's pen down.
 Robot r2d2 = new Robot();
 r2d2.penDown();
+r2d2.miniaturize();
 		// *14. Use the methods setX and setY to move the ninja star into the center of the screen
 		r2d2.setX(400);
 		r2d2.setY(300);
@@ -30,7 +31,7 @@ for (int i = 0; i < 25; i++) {
 
 			// 3. Move the robot 64 pixels
 r2d2.move(6);
-r2d2.setPenColor(Color.YELLOW);
+r2d2.setPenColor(Color.BLUE);
 			// 4. Turn the robot 40 degrees to the LEFT. (Negative numbers will turn the robot counter-clockwise.)
 			r2d2.turn(-40);
 			// 5. Move the robot the distance in the variable flameSize
@@ -40,10 +41,14 @@ r2d2.setPenColor(Color.YELLOW);
 			// 7. Move the robot the distance in the variable flameSize (again)
 			r2d2.move(20);
 			// 8. Turn the robot 64 degrees to the right
-			r2d2.turn(1);
+			r2d2.turn(80);
 			r2d2.setPenColor(Color.BLACK);
 			// 9. Move the robot the distance in the variable baseSize
 			r2d2.move(1);
+			r2d2.turn(60);
+			r2d2.move(50);
+			r2d2.turn(40);
+			r2d2.move(90);
 			// 10. Check that your shape is the same as Figure 1. This is one arm of the ninja star.
 			
 			// 11. Color your ninja star like Figure 2.
