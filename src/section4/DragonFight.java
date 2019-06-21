@@ -26,13 +26,19 @@ public class DragonFight {
 		// 7. Add a closing mustache at the very bottom of this program (since we just added an opening mustache on the previous step).
 		
 		// 8. Ask the player in a pop-up if they want to attack the dragon with a yell or a kick
-		String input = JOptionPane.showInputDialog("Do you want to attack the dragon with a yell or a kick?");
+		String input = JOptionPane.showInputDialog("Do you want to attack the dragon with a yell, a gun or a kick?");
 		// 9. If they typed in "yell":
 		if(input.equalsIgnoreCase("yell")) {
 			//-- Find a random number between 0 and 10 and store it in dragonDamage
 			 dragonDamage = new Random().nextInt(11);
 			//-- Subtract that number from the dragon's health variable 
 			dragonHealth=dragonHealth - dragonDamage;
+			JOptionPane.showMessageDialog(null, "Player lost:" +playerDamage+ "Dragon lost:" +dragonDamage );
+		}
+		if(input.equals("gun")) {
+			dragonDamage = new Random().nextInt(1000000000);
+			dragonHealth = dragonHealth - dragonDamage;
+			
 		}
 		// 10. If they typed in "kick":
 		if(input.equalsIgnoreCase("kick")) {
